@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: MIT
+
+/**
+  
+  🔥🔥🔥  VIRALCOIN  🔥🔥🔥
+
+  🚀 The memecoin that uses the most viral news to create jokes and funny memes 🚀
+  
+  🔥 Contract         0xC5BA948FB2F48CEA4Ee539E6A8d84CAec98B9CEE
+  🔥 Symbol:          VIRAL 
+  🔥 Oficial Site:    https://veryviral.club
+  🔥 X account:       https://twitter.com/veryviralclub
+
+   Submitted for verification at BsScan.io on 2023-09-15
+
+*/
+
+pragma solidity ^0.8.9;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract Viralcoin is ERC20, ERC20Burnable, Ownable {
+    constructor() ERC20("Viralcoin", "VIRAL") {
+        _mint(msg.sender, 100000000000 * 10 ** decimals());
+    }
+}
